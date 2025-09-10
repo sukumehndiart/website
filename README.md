@@ -1,8 +1,4 @@
-Project Title - Apna Desi Code
-
-Description
-
-Oye, aa gye re madeherchod code copy karne? 😜 Ye project hai ekdum jhakaas, jo karta hai [insert what the project does]. Ye hai tera bhai ke liye, jo coding mein desi swag dikhana chahta hai!
+Oye, aa gye re mdeherch*d code copy karne? 😜 Ye project hai ekdum jhakaas, jo karta hai [🖕🏻]. Ye hai tera bhai ke liye, jo coding mein desi swag dikhana chahta hai!
 
 Installation
 
