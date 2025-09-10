@@ -54,95 +54,95 @@
       </div>
     </div>
 
-<!-- Mobile menu overlay -->
-<div id="menuOverlay" class="fixed inset-0 bg-black/50 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden"></div>
+    <!-- Mobile menu overlay -->
+    <div id="menuOverlay" class="fixed inset-0 bg-black/50 z-40 opacity-0 invisible transition-opacity duration-300 md:hidden"></div>
 
-<!-- Mobile menu -->
-<div id="mobileMenu" class="fixed top-0 right-0 w-80 h-full bg-gradient-to-b from-amber-800 to-amber-900 shadow-2xl z-50 md:hidden transform translate-x-full transition-transform duration-300 will-change-transform">
-  <!-- Menu header -->
-  <div class="p-5 border-b border-amber-700 flex items-center justify-between">
-    <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-amber-100 font-semibold text-lg">S</div>
-      <div class="text-amber-100">
-        <div class="font-semibold text-sm">Suku Mehndi Art</div>
-        <div class="text-xs text-amber-300">By SAKSHI</div>
+    <!-- Mobile menu -->
+    <div id="mobileMenu" class="fixed top-0 right-0 w-80 h-full bg-gradient-to-b from-amber-800 to-amber-900 shadow-2xl z-50 md:hidden transform translate-x-full transition-transform duration-300">
+      <!-- Menu header -->
+      <div class="p-5 border-b border-amber-700 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-amber-100 font-semibold text-lg">S</div>
+          <div class="text-amber-100">
+            <div class="font-semibold text-sm">Suku Mehndi Art</div>
+            <div class="text-xs text-amber-300">By SAKSHI</div>
+          </div>
+        </div>
+        <button id="closeMenuBtn" class="text-amber-200 hover:text-white p-2 rounded-full hover:bg-amber-700 transition-colors" aria-label="Close menu">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Menu navigation -->
+      <div class="p-4 flex flex-col gap-1 h-[calc(100%-140px)] overflow-y-auto">
+        <a href="#hero" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-home text-amber-400 w-5 text-center"></i>
+          <span>Home</span>
+        </a>
+        <a href="#about" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-user text-amber-400 w-5 text-center"></i>
+          <span>About</span>
+        </a>
+        <a href="#portfolio" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-images text-amber-400 w-5 text-center"></i>
+          <span>Portfolio</span>
+        </a>
+        <a href="#videos" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-play-circle text-amber-400 w-5 text-center"></i>
+          <span>Videos</span>
+        </a>
+        <a href="#services" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-concierge-bell text-amber-400 w-5 text-center"></i>
+          <span>Services</span>
+        </a>
+        <a href="#booking" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-calendar-check text-amber-400 w-5 text-center"></i>
+          <span>Book</span>
+        </a>
+        <a href="#contact" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
+          <i class="fas fa-envelope text-amber-400 w-5 text-center"></i>
+          <span>Contact</span>
+        </a>
+        
+        <div class="border-t border-amber-700 my-4"></div>
+        
+        <!-- Social links -->
+        <div class="px-5 py-3">
+          <p class="text-amber-300 text-sm font-medium mb-3">Follow Me</p>
+          <div class="flex gap-3">
+            <a href="https://instagram.com/suku.mehndi.art" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-pink-600 hover:text-white transition-colors duration-200">
+              <i class="fab fa-instagram text-lg"></i>
+            </a>
+            <a href="https://youtube.com/@sakshipandey_2201?si=GyyHI_Nm5XEbaCXS" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-red-600 hover:text-white transition-colors duration-200">
+              <i class="fab fa-youtube text-lg"></i>
+            </a>
+            <a href="https://wa.me/91xxxxx?text=Hi%20Suku,%20I'm%20interested%20in%20your%20mehndi%20services" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-green-600 hover:text-white transition-colors duration-200">
+              <i class="fab fa-whatsapp text-lg"></i>
+            </a>
+          </div>
+        </div>
+        
+        <!-- Contact info -->
+        <div class="px-5 py-3 mt-auto">
+          <div class="bg-amber-700/30 rounded-xl p-4">
+            <p class="text-amber-200 text-sm font-medium mb-2">Quick Contact</p>
+            <a href="mailto:sukumehndiart@gmail.com" class="text-amber-100 text-sm flex items-center gap-2 mb-2 hover:text-white transition-colors duration-200">
+              <i class="fas fa-envelope text-amber-400 text-xs"></i>
+              sukumehndiart@gmail.com
+            </a>
+            <a href="tel:+91xxxxx" class="text-amber-100 text-sm flex items-center gap-2 hover:text-white transition-colors duration-200">
+              <i class="fas fa-phone text-amber-400 text-xs"></i>
+              Not available right now 
+            </a>
+          </div>
+        </div>
       </div>
     </div>
-    <button id="closeMenuBtn" class="text-amber-200 hover:text-white p-2 rounded-full hover:bg-amber-700 transition-colors" aria-label="Close menu">
-      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-      </svg>
-    </button>
-  </div>
-
-  <!-- Menu navigation -->
-  <div class="p-4 flex flex-col gap-1 h-[calc(100%-140px)] overflow-y-auto">
-    <a href="#hero" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-home text-amber-400 w-5 text-center"></i>
-      <span>Home</span>
-    </a>
-    <a href="#about" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-user text-amber-400 w-5 text-center"></i>
-      <span>About</span>
-    </a>
-    <a href="#portfolio" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-images text-amber-400 w-5 text-center"></i>
-      <span>Portfolio</span>
-    </a>
-    <a href="#videos" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-play-circle text-amber-400 w-5 text-center"></i>
-      <span>Videos</span>
-    </a>
-    <a href="#services" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-concierge-bell text-amber-400 w-5 text-center"></i>
-      <span>Services</span>
-    </a>
-    <a href="#booking" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-calendar-check text-amber-400 w-5 text-center"></i>
-      <span>Book</span>
-    </a>
-    <a href="#contact" class="py-4 px-5 rounded-xl text-amber-100 hover:bg-amber-700 hover:text-white transition-colors duration-200 flex items-center gap-3">
-      <i class="fas fa-envelope text-amber-400 w-5 text-center"></i>
-      <span>Contact</span>
-    </a>
-    
-    <div class="border-t border-amber-700 my-4"></div>
-    
-    <!-- Social links -->
-    <div class="px-5 py-3">
-      <p class="text-amber-300 text-sm font-medium mb-3">Follow Me</p>
-      <div class="flex gap-3">
-        <a href="https://instagram.com/suku.mehndi.art" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-pink-600 hover:text-white transition-colors duration-200">
-          <i class="fab fa-instagram text-lg"></i>
-        </a>
-        <a href="https://youtube.com/@sakshipandey_2201?si=GyyHI_Nm5XEbaCXS" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-red-600 hover:text-white transition-colors duration-200">
-          <i class="fab fa-youtube text-lg"></i>
-        </a>
-        <a href="https://wa.me/91xxxxx?text=Hi%20Suku,%20I'm%20interested%20in%20your%20mehndi%20services" target="_blank" class="w-12 h-12 rounded-xl bg-amber-700 flex items-center justify-center text-amber-100 hover:bg-green-600 hover:text-white transition-colors duration-200">
-          <i class="fab fa-whatsapp text-lg"></i>
-        </a>
-      </div>
-    </div>
-    
-    <!-- Contact info -->
-    <div class="px-5 py-3 mt-auto">
-      <div class="bg-amber-700/30 rounded-xl p-4">
-        <p class="text-amber-200 text-sm font-medium mb-2">Quick Contact</p>
-        <a href="mailto:sukumehndiart@gmail.com" class="text-amber-100 text-sm flex items-center gap-2 mb-2 hover:text-white transition-colors duration-200">
-          <i class="fas fa-envelope text-amber-400 text-xs"></i>
-          sukumehndiart@gmail.com
-        </a>
-        <a href="tel:+91xxxxx" class="text-amber-100 text-sm flex items-center gap-2 hover:text-white transition-colors duration-200">
-          <i class="fas fa-phone text-amber-400 text-xs"></i>
-          Not available right now 
-        </a>
-      </div>
-    </div>
-  </div>
-</div>
-
   </header>
 
+  
 <!-- Hero Section -->
 <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
   <!-- Background with gradient overlay -->
@@ -353,88 +353,98 @@
   </div>
 </section>
 
-  <!-- Services Section -->
-  <section id="services" class="py-16 bg-amber-50">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <h2 class="text-3xl font-bold text-amber-800">Services & Pricing</h2>
-        <p class="mt-2 text-amber-700">Custom mehndi designs for all occasions</p>
+<!-- Videos Section -->
+<section id="videos" class="py-16 bg-amber-50 relative overflow-hidden">
+  <!-- Decorative elements -->
+  <div class="absolute top-10 right-10 w-20 h-20 opacity-5">
+    <svg viewBox="0 0 100 100" class="text-amber-500">
+      <path fill="currentColor" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z M50,10 C27.909,10 10,27.909 10,50 C10,72.091 27.909,90 50,90 C72.091,90 90,72.091 90,50 C90,27.909 72.091,10 50,10 Z"></path>
+    </svg>
+  </div>
+  
+  <div class="max-w-6xl mx-auto px-4 relative z-10">
+    <div class="text-center mb-12">
+      <div class="inline-flex items-center bg-amber-100 px-4 py-2 rounded-full text-amber-700 text-sm mb-4">
+        <i class="fas fa-play-circle mr-2"></i> Short Videos
       </div>
-      
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
-          <div class="text-amber-600 text-4xl mb-4">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-amber-800">Bridal Full</h3>
-          <p class="mt-2 text-gray-600">Custom full-arm + feet bridal set</p>
-          <div class="mt-4 text-amber-700 font-semibold text-lg">Contact for quote</div>
-          <ul class="mt-4 space-y-2 text-sm text-gray-600">
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Intricate traditional patterns</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Personalized motifs</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Long-lasting natural henna</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
-          <div class="text-amber-600 text-4xl mb-4">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-amber-800">Party / Guests</h3>
-          <p class="mt-2 text-gray-600">Small to medium designs for events</p>
-          <div class="mt-4 text-amber-700 font-semibold text-lg">₹800+</div>
-          <ul class="mt-4 space-y-2 text-sm text-gray-600">
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Quick application</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Multiple design options</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Group booking discounts</span>
-            </li>
-          </ul>
-        </div>
-        
-        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
-          <div class="text-amber-600 text-4xl mb-4">
-            <i class="fas fa-palette"></i>
-          </div>
-          <h3 class="text-xl font-semibold text-amber-800">Custom & Trial</h3>
-          <p class="mt-2 text-gray-600">Design trials, custom motifs</p>
-          <div class="mt-4 text-amber-700 font-semibold text-lg">₹500+</div>
-          <ul class="mt-4 space-y-2 text-sm text-gray-600">
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Design consultation</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Practice sessions</span>
-            </li>
-            <li class="flex items-start">
-              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
-              <span>Custom pattern creation</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-      
-      <p class="mt-8 text-center text-gray-600">Prices depend on design complexity and travel. For exact quotes, use the booking form below or DM on Instagram.</p>
+      <h2 class="text-4xl font-bold text-amber-800">Mehndi Art Shorts</h2>
+      <p class="mt-3 text-amber-700 max-w-2xl mx-auto">Watch quick mehndi tutorials and design showcases</p>
     </div>
-  </section>
+    
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+      <!-- Video 1 - YouTube Short -->
+      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+        <div class="video-container-shorts relative">
+          <iframe src="https://www.youtube.com/embed/S3b85gZEcSk" title="Mehndi Application Process" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-800 mb-2">Mehndi Design Process</h3>
+          <p class="text-sm text-gray-600">Quick timelapse of mehndi application</p>
+          <div class="mt-3 flex items-center text-xs text-amber-600">
+            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 2 - YouTube Short -->
+      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+        <div class="video-container-shorts relative">
+          <iframe src="https://www.youtube.com/embed/1UVchkMdjaw" title="Intricate Mehndi Patterns" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-800 mb-2">Intricate Patterns</h3>
+          <p class="text-sm text-gray-600">Detailed mehndi design showcase</p>
+          <div class="mt-3 flex items-center text-xs text-amber-600">
+            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
+          </div>
+        </div>
+      </div>
+      
+      <!-- Video 3 - YouTube Short -->
+      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
+        <div class="video-container-shorts relative">
+          <iframe src="https://www.youtube.com/embed/VuWARBgAXRk" title="Bridal Mehndi Special" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="p-5">
+          <h3 class="font-semibold text-amber-800 mb-2">Bridal Mehndi</h3>
+          <p class="text-sm text-gray-600">Beautiful bridal design showcase</p>
+          <div class="mt-3 flex items-center text-xs text-amber-600">
+            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Video Stats -->
+    <div class="bg-white rounded-2xl p-6 shadow-sm mb-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div>
+          <div class="text-3xl font-bold text-amber-700">15+</div>
+          <div class="text-sm text-gray-600">Shorts</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-amber-700">10K+</div>
+          <div class="text-sm text-gray-600">Views</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-amber-700">⏳</div>
+          <div class="text-sm text-gray-600">Subscribers</div>
+        </div>
+        <div>
+          <div class="text-3xl font-bold text-amber-700">150+</div>
+          <div class="text-sm text-gray-600">Likes</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center">
+      <a href="https://youtube.com/@sakshipandey_2201?si=GyyHI_Nm5XEbaCXS" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-full shadow-md hover:shadow-lg hover:bg-red-700 transition-all duration-300 group">
+        <i class="fab fa-youtube group-hover:scale-110 transition-transform"></i> Subscribe on YouTube 
+      </a>
+      <p class="mt-4 text-sm text-gray-600">New shorts uploaded every week!</p>
+    </div>
+  </div>
+</section>
 
 <!-- Portfolio Section -->
 <section id="portfolio" class="py-16 bg-white">
@@ -585,98 +595,88 @@
   </div>
 </section>
 
-<!-- Videos Section -->
-<section id="videos" class="py-16 bg-amber-50 relative overflow-hidden">
-  <!-- Decorative elements -->
-  <div class="absolute top-10 right-10 w-20 h-20 opacity-5">
-    <svg viewBox="0 0 100 100" class="text-amber-500">
-      <path fill="currentColor" d="M50,0 C77.614,0 100,22.386 100,50 C100,77.614 77.614,100 50,100 C22.386,100 0,77.614 0,50 C0,22.386 22.386,0 50,0 Z M50,10 C27.909,10 10,27.909 10,50 C10,72.091 27.909,90 50,90 C72.091,90 90,72.091 90,50 C90,27.909 72.091,10 50,10 Z"></path>
-    </svg>
-  </div>
-  
-  <div class="max-w-6xl mx-auto px-4 relative z-10">
-    <div class="text-center mb-12">
-      <div class="inline-flex items-center bg-amber-100 px-4 py-2 rounded-full text-amber-700 text-sm mb-4">
-        <i class="fas fa-play-circle mr-2"></i> Short Videos
+  <!-- Services Section -->
+  <section id="services" class="py-16 bg-amber-50">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold text-amber-800">Services & Pricing</h2>
+        <p class="mt-2 text-amber-700">Custom mehndi designs for all occasions</p>
       </div>
-      <h2 class="text-4xl font-bold text-amber-800">Mehndi Art Shorts</h2>
-      <p class="mt-3 text-amber-700 max-w-2xl mx-auto">Watch quick mehndi tutorials and design showcases</p>
-    </div>
-    
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-      <!-- Video 1 - YouTube Short -->
-      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-        <div class="video-container-shorts relative">
-          <iframe src="https://www.youtube.com/embed/S3b85gZEcSk" title="Mehndi Application Process" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-amber-800 mb-2">Mehndi Design Process</h3>
-          <p class="text-sm text-gray-600">Quick timelapse of mehndi application</p>
-          <div class="mt-3 flex items-center text-xs text-amber-600">
-            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
+      
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
+          <div class="text-amber-600 text-4xl mb-4">
+            <i class="fas fa-heart"></i>
           </div>
+          <h3 class="text-xl font-semibold text-amber-800">Bridal Full</h3>
+          <p class="mt-2 text-gray-600">Custom full-arm + feet bridal set</p>
+          <div class="mt-4 text-amber-700 font-semibold text-lg">Contact for quote</div>
+          <ul class="mt-4 space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Intricate traditional patterns</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Personalized motifs</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Long-lasting natural henna</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
+          <div class="text-amber-600 text-4xl mb-4">
+            <i class="fas fa-users"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800">Party / Guests</h3>
+          <p class="mt-2 text-gray-600">Small to medium designs for events</p>
+          <div class="mt-4 text-amber-700 font-semibold text-lg">₹800+</div>
+          <ul class="mt-4 space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Quick application</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Multiple design options</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Group booking discounts</span>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="bg-white rounded-2xl p-6 shadow-sm hover:shadow-md transition-shadow border border-amber-100">
+          <div class="text-amber-600 text-4xl mb-4">
+            <i class="fas fa-palette"></i>
+          </div>
+          <h3 class="text-xl font-semibold text-amber-800">Custom & Trial</h3>
+          <p class="mt-2 text-gray-600">Design trials, custom motifs</p>
+          <div class="mt-4 text-amber-700 font-semibold text-lg">₹500+</div>
+          <ul class="mt-4 space-y-2 text-sm text-gray-600">
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Design consultation</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Practice sessions</span>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-check text-amber-500 mt-1 mr-2"></i>
+              <span>Custom pattern creation</span>
+            </li>
+          </ul>
         </div>
       </div>
       
-      <!-- Video 2 - YouTube Short -->
-      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-        <div class="video-container-shorts relative">
-          <iframe src="https://www.youtube.com/embed/1UVchkMdjaw" title="Intricate Mehndi Patterns" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-amber-800 mb-2">Intricate Patterns</h3>
-          <p class="text-sm text-gray-600">Detailed mehndi design showcase</p>
-          <div class="mt-3 flex items-center text-xs text-amber-600">
-            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
-          </div>
-        </div>
-      </div>
-      
-      <!-- Video 3 - YouTube Short -->
-      <div class="video-card bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 group">
-        <div class="video-container-shorts relative">
-          <iframe src="https://www.youtube.com/embed/VuWARBgAXRk" title="Bridal Mehndi Special" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="p-5">
-          <h3 class="font-semibold text-amber-800 mb-2">Bridal Mehndi</h3>
-          <p class="text-sm text-gray-600">Beautiful bridal design showcase</p>
-          <div class="mt-3 flex items-center text-xs text-amber-600">
-            <i class="fab fa-youtube mr-1 text-red-500"></i> YouTube Short
-          </div>
-        </div>
-      </div>
+      <p class="mt-8 text-center text-gray-600">Prices depend on design complexity and travel. For exact quotes, use the booking form below or DM on Instagram.</p>
     </div>
-    
-    <!-- Video Stats -->
-    <div class="bg-white rounded-2xl p-6 shadow-sm mb-12">
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-        <div>
-          <div class="text-3xl font-bold text-amber-700">15+</div>
-          <div class="text-sm text-gray-600">Shorts</div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-amber-700">10K+</div>
-          <div class="text-sm text-gray-600">Views</div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-amber-700">⏳</div>
-          <div class="text-sm text-gray-600">Subscribers</div>
-        </div>
-        <div>
-          <div class="text-3xl font-bold text-amber-700">150+</div>
-          <div class="text-sm text-gray-600">Likes</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="text-center">
-      <a href="https://youtube.com/@sakshipandey_2201?si=GyyHI_Nm5XEbaCXS" target="_blank" class="inline-flex items-center gap-2 px-6 py-3 bg-red-600 text-white rounded-full shadow-md hover:shadow-lg hover:bg-red-700 transition-all duration-300 group">
-        <i class="fab fa-youtube group-hover:scale-110 transition-transform"></i> Subscribe on YouTube 
-      </a>
-      <p class="mt-4 text-sm text-gray-600">New shorts uploaded every week!</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Booking Section -->
   <section id="booking" class="py-16 bg-white">
@@ -810,7 +810,7 @@
     </div>
   </section>
 
-<!-- Contact Section -->
+  <!-- Contact Section -->
 <section id="contact" class="py-16 bg-white">
   <div class="max-w-6xl mx-auto px-4">
     <div class="text-center mb-12">
@@ -950,7 +950,8 @@
   <a href="https://instagram.com/suku.mehndi.art" target="_blank" class="fixed bottom-6 right-6 w-14 h-14 bg-gradient-to-r from-amber-500 to-amber-600 rounded-full flex items-center justify-center text-white shadow-lg floating-btn z-50">
     <i class="fab fa-instagram text-xl"></i>
   </a>
-  <script src="script.js"></script>
+   
   
+  <script src="script.js"></script>
 </body>
 </html>
