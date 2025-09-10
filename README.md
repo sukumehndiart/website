@@ -1,26 +1,71 @@
-# Suku Mehndi Art Portfolio Website
+Project Title - Apna Desi Code
 
-A modern, responsive, and mobile-friendly portfolio website for a professional Bridal & Event Mehndi (Henna) Artist.
+Description
 
-**Live Demo:** [https://sukumehndiart.github.io/website/]
+Oye, aa gye re madeherchod code copy karne? 😜 Ye project hai ekdum jhakaas, jo karta hai [insert what the project does]. Ye hai tera bhai ke liye, jo coding mein desi swag dikhana chahta hai!
 
-## ✨ Features
+Installation
 
--   **Responsive Design:** Looks great on desktop, tablet, and mobile.
--   **Booking Form:** Functional contact form powered by FormSubmit.
--   **Portfolio Gallery:** Grid layout showcasing mehndi designs.
--   **Video Integration:** Embedded YouTube videos in a portrait aspect ratio.
--   **Modern UI:** Built with Tailwind CSS for a clean and elegant aesthetic.
--   **Mobile Navigation:** Hamburger menu for smaller screens.
+# Chal, pehle repo le le
+git clone https://github.com/t/repository.git
+cd repository
+npm install  # Ya jo bhi chahiye, apne hisaab se laga le
 
-## 🛠️ Built With
+Usage
 
--   HTML5
--   Tailwind CSS
--   JavaScript (Vanilla)
--   Font Awesome Icons
--   Google Fonts (Poppins)
+# Code chala, bhai!
+npm start  # Ya jo bhi command hai, tu dekh le
 
-## 📞 Contact For Create Your Site
+Bhai, agar tune code copy kiya bina samjhe, toh teri MKC 5 baar! 😆 Ek baar run karke dekh, screenshot bhi daal denge yaha jaldi.
 
-Shubham - [@i.shubham0210](https://instagram.com/i.shubham0210) - shubhambro7084@gmail.com
+Features
+
+
+
+
+
+Ekdum badhiya feature 1
+
+
+
+Mast wala feature 2
+
+
+
+Aur ek thok feature 3
+
+Contributing
+
+Oye, contribute karna hai toh dil se kar! Copy-paste kiya toh teri BC! 😝 Steps dekh le:
+
+
+
+
+
+Repo fork kar, bhai
+
+
+
+Nayi branch bana (git checkout -b thok-branch)
+
+
+
+Apne changes commit kar (git commit -m 'Thok diya kuch naya')
+
+
+
+Branch push kar (git push origin thok-branch)
+
+
+
+Pull Request maar, aur chill kar!
+
+License
+
+Ye project hai MIT License ke neeche - LICENSE file dekh le, samjha?
+
+Contact
+
+Tera Bhai - drtfreefireyt@gmail.com
+Project Link: GaadMasti To Dekh Apni Sb idher hi chahiye BKL
+Koi dikkat ho toh DM maar, par bakchodi na karna! 😎
