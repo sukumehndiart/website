@@ -1,152 +1,199 @@
-// Mobile menu functionality
-const menuBtn = document.getElementById('menuBtn');
-const closeMenuBtn = document.getElementById('closeMenuBtn');
-const mobileMenu = document.getElementById('mobileMenu');
-const menuOverlay = document.getElementById('menuOverlay');
-
-function openMenu() {
-  mobileMenu.classList.add('open');
-  menuOverlay.classList.add('visible');
-  document.body.style.overflow = 'hidden';
-}
-
-function closeMenu() {
-  mobileMenu.classList.remove('open');
-  menuOverlay.classList.remove('visible');
-  document.body.style.overflow = 'auto';
-}
-
-menuBtn.addEventListener('click', openMenu);
-closeMenuBtn.addEventListener('click', closeMenu);
-menuOverlay.addEventListener('click', closeMenu);
-
-// Close menu when clicking on links
-const menuLinks = document.querySelectorAll('#mobileMenu a');
-menuLinks.forEach(link => {
-  link.addEventListener('click', closeMenu);
-});
-
-// Back to top button
-const backToTopBtn = document.getElementById('backToTop');
-
-window.addEventListener('scroll', () => {
-  if (window.pageYOffset > 300) {
-    backToTopBtn.classList.remove('opacity-0', 'invisible');
-    backToTopBtn.classList.add('opacity-100', 'visible');
-  } else {
-    backToTopBtn.classList.remove('opacity-100', 'visible');
-    backToTopBtn.classList.add('opacity-0', 'invisible');
-  }
-});
-
-backToTopBtn.addEventListener('click', () => {
-  window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  });
-});
-
-// Portfolio filtering
-const filterButtons = document.querySelectorAll('.filter-btn');
-const portfolioItems = document.querySelectorAll('.portfolio-item');
-
-filterButtons.forEach(button => {
-  button.addEventListener('click', () => {
-    // Remove active class from all buttons
-    filterButtons.forEach(btn => btn.classList.remove('active', 'bg-amber-500', 'text-white'));
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
     
-    // Add active class to clicked button
-    button.classList.add('active', 'bg-amber-500', 'text-white');
-    button.classList.remove('bg-amber-100', 'text-amber-700', 'hover:bg-amber-500');
-    
-    const filterValue = button.getAttribute('data-filter');
-    
-    portfolioItems.forEach(item => {
-      if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
-        item.style.display = 'block';
-      } else {
-        item.style.display = 'none';
-      }
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('menu-closed');
+      mobileMenu.classList.toggle('menu-open');
     });
-  });
-});
-
-// Form submission handling
-const bookingForm = document.getElementById('bookingForm');
-
-bookingForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  // Get form values
-  const name = document.getElementById('name').value;
-  const phone = document.getElementById('phone').value;
-  const email = document.getElementById('email').value;
-  const service = document.getElementById('service').value;
-  const date = document.getElementById('date').value;
-  const message = document.getElementById('message').value;
-  
-  // Create WhatsApp message
-  const whatsappMessage = `Hello Suku! I would like to book a mehndi appointment.%0A%0AName: ${name}%0APhone: ${phone}%0A${email ? `Email: ${email}%0A` : ''}Service: ${service}%0A${date ? `Preferred Date: ${date}%0A` : ''}${message ? `Details: ${message}` : ''}`;
-  
-  // Open WhatsApp with pre-filled message
-  window.open(`https://wa.me/91xxxxxxxxxx?text=${whatsappMessage}`, '_blank');
-  
-  // Reset form
-  bookingForm.reset();
-  
-  // Show success message (you could implement a toast notification here)
-  alert('Thank you for your booking request! We have opened WhatsApp for you to send your details.');
-});
-
-// Initialize date picker with min date as today
-const dateInput = document.getElementById('date');
-const today = new Date();
-const formattedDate = today.toISOString().split('T')[0];
-dateInput.setAttribute('min', formattedDate);
-
-// Image lazy loading
-document.addEventListener('DOMContentLoaded', function() {
-  const lazyImages = [].slice.call(document.querySelectorAll('img.gallery-img'));
-  
-  if ('IntersectionObserver' in window) {
-    const lazyImageObserver = new IntersectionObserver(function(entries, observer) {
-      entries.forEach(function(entry) {
-        if (entry.isIntersecting) {
-          const lazyImage = entry.target;
-          lazyImage.src = lazyImage.dataset.src || lazyImage.src;
-          lazyImage.classList.remove('lazy');
-          lazyImageObserver.unobserve(lazyImage);
-        }
+    
+    // Close menu when clicking links
+    document.querySelectorAll('#mobileMenu a').forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('menu-closed');
+        mobileMenu.classList.remove('menu-open');
       });
     });
-    
-    lazyImages.forEach(function(lazyImage) {
-      lazyImageObserver.observe(lazyImage);
-    });
-  }
-});
 
-// Add subtle animations to elements when they come into view
-const animateOnScroll = () => {
-  const elements = document.querySelectorAll('.portfolio-item, .service-card');
-  
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = 1;
-        entry.target.style.transform = 'translateY(0)';
-        observer.unobserve(entry.target);
+    // Prevent selecting old dates
+    document.addEventListener("DOMContentLoaded", function() {
+      const dateInput = document.getElementById("date");
+      const today = new Date().toISOString().split("T")[0];
+      dateInput.setAttribute("min", today);
+    });
+    
+    // Form submission handling
+    const bookingForm = document.getElementById('bookingForm');
+    const formMsg = document.getElementById('formMsg');
+    const formError = document.getElementById('formError');
+    
+    // Function to show thank you message
+    function showThankYou() {
+      document.getElementById('thankyou').classList.remove('hidden');
+    }
+    
+    // Function to close thank you message
+    function closeThankYou() {
+      document.getElementById('thankyou').classList.add('hidden');
+    }
+    
+    // Handle URL hash (for formsubmit.co redirect)
+    if (window.location.hash === '#thankyou') {
+      showThankYou();
+      // Remove the hash from URL without refreshing
+      history.replaceState(null, null, ' ');
+    }
+    
+    bookingForm.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      
+      // Basic validation
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const service = document.getElementById('service').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !phone || !service || !message) {
+        formError.textContent = 'Please fill all required fields';
+        formError.classList.remove('hidden');
+        formMsg.classList.add('hidden');
+        return;
+      }
+      
+      try {
+        // Show loading state
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.innerHTML;
+        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+        submitBtn.disabled = true;
+        
+        // Use FormSubmit.co to send the form
+        const formData = new FormData(bookingForm);
+        
+        const response = await fetch(bookingForm.action, {
+          method: 'POST',
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+        
+        if (response.ok) {
+          // Show success message
+          formMsg.classList.remove('hidden');
+          formError.classList.add('hidden');
+          bookingForm.reset();
+          
+          // Also show the thank you modal
+          showThankYou();
+        } else {
+          throw new Error('Form submission failed');
+        }
+        
+        // Restore button state
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+        
+      } catch (error) {
+        console.error('Form submission error:', error);
+        formError.textContent = 'There was an error submitting the form. Please try again or DM me on Instagram.';
+        formError.classList.remove('hidden');
+        formMsg.classList.add('hidden');
+        
+        // Restore button state
+        const submitBtn = bookingForm.querySelector('button[type="submit"]');
+        submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Send Booking Request';
+        submitBtn.disabled = false;
       }
     });
-  }, { threshold: 0.1 });
-  
-  elements.forEach(el => {
-    el.style.opacity = 0;
-    el.style.transform = 'translateY(20px)';
-    el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-    observer.observe(el);
-  });
-};
 
-// Initialize animations when page loads
-window.addEventListener('load', animateOnScroll);
+     // Portfolio filtering functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active', 'bg-amber-500', 'text-white'));
+        
+        // Add active class to clicked button
+        button.classList.add('active', 'bg-amber-500', 'text-white');
+        button.classList.remove('bg-amber-100', 'text-amber-700', 'hover:bg-amber-500');
+        
+        const filterValue = button.getAttribute('data-filter');
+        
+        portfolioItems.forEach(item => {
+          if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+            item.style.display = 'block';
+          } else {
+            item.style.display = 'none';
+          }
+        });
+      });
+    });
+  });
+
+    // Optimized mobile menu functionality
+  document.addEventListener('DOMContentLoaded', function() {
+    const menuBtn = document.getElementById('menuBtn');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const menuOverlay = document.getElementById('menuOverlay');
+    const menuLinks = document.querySelectorAll('#mobileMenu a');
+    
+    // Open menu function
+    function openMenu() {
+      // Prevent animation frame conflicts
+      requestAnimationFrame(() => {
+        document.body.classList.add('no-scroll');
+        menuOverlay.classList.add('active');
+        mobileMenu.classList.add('menu-open');
+        mobileMenu.classList.remove('translate-x-full');
+      });
+    }
+    
+    // Close menu function
+    function closeMenu() {
+      // Prevent animation frame conflicts
+      requestAnimationFrame(() => {
+        document.body.classList.remove('no-scroll');
+        menuOverlay.classList.remove('active');
+        mobileMenu.classList.remove('menu-open');
+        mobileMenu.classList.add('translate-x-full');
+      });
+    }
+    
+    // Event listeners with passive option for better performance
+    menuBtn.addEventListener('click', openMenu, { passive: true });
+    closeMenuBtn.addEventListener('click', closeMenu, { passive: true });
+    menuOverlay.addEventListener('click', closeMenu, { passive: true });
+    
+    // Close menu when clicking links
+    menuLinks.forEach(link => {
+      link.addEventListener('click', closeMenu, { passive: true });
+    });
+    
+    // Close menu with Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && mobileMenu.classList.contains('menu-open')) {
+        closeMenu();
+      }
+    }, { passive: true });
+    
+    // Handle resize events - close menu on large screens
+    function handleResize() {
+      if (window.innerWidth >= 768 && mobileMenu.classList.contains('menu-open')) {
+        closeMenu();
+      }
+    }
+    
+    // Throttled resize handler
+    let resizeTimeout;
+    window.addEventListener('resize', function() {
+      clearTimeout(resizeTimeout);
+      resizeTimeout = setTimeout(handleResize, 100);
+    }, { passive: true });
+  });
+  </script>

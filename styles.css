@@ -1,128 +1,285 @@
-/* Custom styles for Suku Mehndi Art website */
+ <style>
+    :root {
+      --accent: #b36b2e;
+      --accent-light: #fef3e8;
+    }
+    
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;<div id="mobileMenu" class="fixed top-16 right-0 w-64 h-full bg-white border-l shadow-lg menu-closed transition-transform duration-300 z-40 md:hidden">
+      <div class="p-4 flex flex-col gap-1">
+        <a href="#hero" class="py-3 px-4 rounded-lg hover:bg-amber-50">Home</a>
+        <a href="#about" class="py-3 px-4 rounded-lg hover:bg-amber-50">About</a>
+        <a href="#portfolio" class="py-3 px-4 rounded-lg hover:bg-amber-50">Portfolio</a>
+        <a href="#videos" class=
+    }
+    
+    .gallery-img {
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+    
+    .gallery-img:hover {
+      transform: scale(1.03);
+    }
+    
+    .instagram-embed { 
+      border-radius: 12px; 
+      overflow: hidden; 
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    
+    .instagram-embed:hover {
+      transform: translateY(-5px);
+    }
+    
+    .bio-flower {
+      display: inline-block;
+      margin: 0 5px;
+      color: #b36b2e;
+    }
+    
+    .floating-btn {
+      animation: pulse 2s infinite;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    
+    .testimonial-card {
+      transition: transform 0.3s ease;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+    }
+    
+    .menu-open {
+      transform: translateX(0);
+    }
+    
+    .menu-closed {
+      transform: translateX(100%);
+    }
+    
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+    }
+    
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    /* Form styles */
+    .form-input {
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      box-shadow: 0 0 0 3px rgba(179, 107, 46, 0.2);
+    }
+    
+    /* Portrait video container */
+    .video-container-portrait {
+      position: relative;
+      padding-bottom: 177.8%; /* 9:16 aspect ratio (16/9 = 1.777) */
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      width: 100%;
+      max-width: 360px; /* Limits width for portrait videos */
+    }
 
-/* Base styles */
-body {
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
-}
+    .video-container-portrait iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
 
-/* Custom utility classes */
-.bio-flower {
-  display: inline-block;
-  margin: 0 4px;
-  font-size: 1.1em;
-}
-
-/* Portfolio filter and gallery styles */
-.filter-btn.active {
-  background-color: #f59e0b;
-  color: white;
-}
-
-.portfolio-item {
-  transition: transform 0.3s ease;
-}
-
-.portfolio-item:hover {
-  transform: translateY(-5px);
-}
-
-.gallery-img {
-  transition: transform 0.5s ease;
-}
-
-.portfolio-item:hover .gallery-img {
-  transform: scale(1.05);
-}
-
-/* Mobile menu animations */
-#mobileMenu.open {
-  transform: translateX(0);
-}
-
-#menuOverlay.visible {
-  opacity: 1;
-  visibility: visible;
-}
-
-/* Custom scrollbar for webkit browsers */
-::-webkit-scrollbar {
-  width: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #fef3c7;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #f59e0b;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #d97706;
-}
-
-/* Animation for decorative elements */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0);
+    .contact-card:hover .fa-instagram {
+    color: #E1306C;
   }
-  50% {
-    transform: translateY(-10px);
+  
+  .contact-card:hover .fa-envelope {
+    color: #EA4335;
   }
-}
+  
+  .contact-card:hover .fa-map-marker-alt {
+    color: #34A853;
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-5px);
+  }
 
-.floating-element {
-  animation: float 6s ease-in-out infinite;
-}
+   footer a, footer button {
+    transition: all 0.3s ease;
+  }
+  
+  footer .social-icon:hover {
+    transform: translateY(-3px);
+  }
 
-/* Form styling enhancements */
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
-}
+   #hero {
+    scroll-margin-top: 4rem;
+  }
+  
+  .bio-flower {
+    display: inline-block;
+    margin: 0 5px;
+    color: #b36b2e;
+    transition: transform 0.3s ease;
+  }
+  
+  .bio-flower:hover {
+    transform: rotate(180deg);
+  }
 
-/* Hero section text shadow for better readability */
-#hero h1, #hero p {
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
-}
+  #about {
+    scroll-margin-top: 2rem;
+  }
+  
+  .prose-amber p {
+    margin-bottom: 1.5rem;
+  }
+  
+  .prose-amber p:last-child {
+    margin-bottom: 0;
+  }
 
-/* Custom button hover effects */
-.btn-hover-effect {
-  position: relative;
-  overflow: hidden;
-}
+  #portfolio {
+    scroll-margin-top: 2rem;
+  }
+  
+  .portfolio-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .portfolio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  .gallery-img {
+    transition: transform 0.5s ease;
+  }
+  
+  .portfolio-item:hover .gallery-img {
+    transform: scale(1.05);
+  }
+  
+  .filter-btn.active {
+    background-color: #f59e0b;
+    color: white;
+  }
 
-.btn-hover-effect::after {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 5px;
-  height: 5px;
-  background: rgba(255, 255, 255, 0.5);
-  opacity: 0;
-  border-radius: 100%;
-  transform: scale(1, 1) translate(-50%);
-  transform-origin: 50% 50%;
-}
+  #videos {
+    scroll-margin-top: 2rem;
+  }
+  
+  .video-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .video-container-portrait {
+    position: relative;
+    padding-bottom: 177.8%; /* 9:16 aspect ratio (16/9 = 1.777) */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+    max-width: 100%;
+  }
 
-.btn-hover-effect:hover::after {
-  animation: ripple 1s ease-out;
-}
+  .video-container-portrait iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
 
-@keyframes ripple {
-  0% {
-    transform: scale(0, 0);
+   #mobileMenu {
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translate3d(100%, 0, 0);
+  }
+  
+  #mobileMenu.menu-open {
+    transform: translate3d(0, 0, 0);
+  }
+  
+  #menuOverlay {
+    will-change: opacity;
+    backface-visibility: hidden;
+  }
+  
+  #menuOverlay.active {
     opacity: 1;
+    visibility: visible;
   }
-  20% {
-    transform: scale(60, 60);
-    opacity: 1;
+  
+  /* Prevent body scroll when menu is open */
+  body.no-scroll {
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+    height: 100%;
   }
-  100% {
-    opacity: 0;
-    transform: scale(100, 100);
+ 
+  #videos {
+    scroll-margin-top: 2rem;
   }
-}
+  
+  .video-card {
+    transition: transform 0.3s ease;
+  }
+  
+  .video-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .video-container-shorts {
+    position: relative;
+    padding-bottom: 177.8%; /* 9:16 aspect ratio for Shorts */
+    height: 0;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+    width: 100%;
+  }
+
+  .video-container-shorts iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  .video-container-shorts .absolute {
+    display: none;
+  }
+  </style>
