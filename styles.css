@@ -1,0 +1,128 @@
+/* Custom styles for Suku Mehndi Art website */
+
+/* Base styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
+}
+
+/* Custom utility classes */
+.bio-flower {
+  display: inline-block;
+  margin: 0 4px;
+  font-size: 1.1em;
+}
+
+/* Portfolio filter and gallery styles */
+.filter-btn.active {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.portfolio-item {
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-img {
+  transition: transform 0.5s ease;
+}
+
+.portfolio-item:hover .gallery-img {
+  transform: scale(1.05);
+}
+
+/* Mobile menu animations */
+#mobileMenu.open {
+  transform: translateX(0);
+}
+
+#menuOverlay.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #fef3c7;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f59e0b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #d97706;
+}
+
+/* Animation for decorative elements */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Form styling enhancements */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.1);
+}
+
+/* Hero section text shadow for better readability */
+#hero h1, #hero p {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Custom button hover effects */
+.btn-hover-effect {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hover-effect::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: rgba(255, 255, 255, 0.5);
+  opacity: 0;
+  border-radius: 100%;
+  transform: scale(1, 1) translate(-50%);
+  transform-origin: 50% 50%;
+}
+
+.btn-hover-effect:hover::after {
+  animation: ripple 1s ease-out;
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(0, 0);
+    opacity: 1;
+  }
+  20% {
+    transform: scale(60, 60);
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(100, 100);
+  }
+}
