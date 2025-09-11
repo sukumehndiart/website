@@ -70,7 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('thankyou').classList.remove('hidden');
   }
   
-  // Function to show thank you message
+  // Function to close thank you message
 window.closeThankYou = function() {
   document.getElementById('thankyou').classList.add('hidden');
 };
