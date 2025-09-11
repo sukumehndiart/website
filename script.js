@@ -70,10 +70,10 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('thankyou').classList.remove('hidden');
   }
   
-  // Function to close thank you message
-  function closeThankYou() {
-    document.getElementById('thankyou').classList.add('hidden');
-  }
+  // Function to show thank you message
+window.closeThankYou = function() {
+  document.getElementById('thankyou').classList.add('hidden');
+};
   
   // Handle URL hash (for formsubmit.co redirect)
   if (window.location.hash === '#thankyou') {
